@@ -1,13 +1,13 @@
 "use server";
 
-import { AlbionSDK, type SearchResponse } from "albion-sdk";
+import { AlbionSDK, type SearchGuild } from "albion-sdk";
 import type { AlbionRegion } from "@/config/site-config";
 
 export async function searchGuilds(
 	region: AlbionRegion,
 	guildName: string,
-): Promise<SearchResponse> {
+): Promise<Array<SearchGuild>> {
 	const sdk = new AlbionSDK(region);
-
-	return await sdk.search(guildName);
+	const searchRes = await sdk.search(guildName);
+	return searchRes.guilds;
 }
