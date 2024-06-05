@@ -17,7 +17,7 @@ export function RegionSelector({
 }) {
 	return (
 		<Select value={currentRegion} onValueChange={handleRegionChange}>
-			<SelectTrigger>
+			<SelectTrigger className="w-[110px]">
 				<SelectValue />
 			</SelectTrigger>
 			<SelectContent>

@@ -57,16 +57,18 @@ export function GuildSearch() {
 
 	return (
 		<>
-			<div className="flex gap-2">
+			<div className="flex flex-col sm:flex-row gap-2">
 				<SearchBar region={region} />
 
-				<RegionSelector
-					currentRegion={region}
-					regionList={
-						siteConfig.albionServerRegions as unknown as Array<string>
-					}
-					handleRegionChange={handleRegionChange}
-				/>
+				<div className="flex justify-center">
+					<RegionSelector
+						currentRegion={region}
+						regionList={
+							siteConfig.albionServerRegions as unknown as Array<string>
+						}
+						handleRegionChange={handleRegionChange}
+					/>
+				</div>
 			</div>
 
 			<div className="mt-4 flex justify-center">
