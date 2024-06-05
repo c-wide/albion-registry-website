@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { type AlbionRegion, siteConfig } from "@/config/site-config";
 import { GUILD_SEARCH_REGION_KEY } from "@/config/local-storage";
@@ -39,13 +39,21 @@ function loadRegion(): AlbionRegion {
 
 export function GuildSearch() {
 	const router = useRouter();
-	const [region, setRegion] = useState<AlbionRegion>(loadRegion());
+	const [region, setRegion] = useState<AlbionRegion | null>(null);
+
+	useEffect(() => {
+		setRegion(loadRegion());
+	}, []);
 
 	const handleRegionChange = (selectedRegion: string) => {
 		if (!isValidRegion(selectedRegion)) return;
 		setRegion(selectedRegion);
 		localStorage.setItem(GUILD_SEARCH_REGION_KEY, selectedRegion);
 	};
+
+	if (region === null) {
+		return null;
+	}
 
 	return (
 		<>
