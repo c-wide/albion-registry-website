@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GeistSans } from "geist/font/sans";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SiteHeader } from "@/components/site-header";
@@ -28,6 +29,7 @@ export default function RootLayout({
 					<div className="flex min-h-screen flex-col">
 						<SiteHeader />
 						{children}
+						<SpeedInsights />
 					</div>
 				</ThemeProvider>
 			</body>
