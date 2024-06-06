@@ -28,9 +28,9 @@ export function FeatureLinkCard({
 					<Icon className="h-12 w-12 shrink-0 stroke-1" />
 				</div>
 
-				{disabled && <Badge>Coming Soon!</Badge>}
+				{disabled && <Badge>Coming Soon</Badge>}
 
-				<div>
+				<div className="flex flex-col items-center">
 					<h1 className="text-center text-2xl font-semibold leading-none tracking-tight">
 						{header}
 					</h1>
