@@ -1,7 +1,7 @@
-import { GuildSearch } from "@/components/guild-search";
 import Balance from "react-wrap-balancer";
+import { GuildSearch } from "@/components/guild-search";
 
-export const maxDuration = 30;
+export const maxDuration = 60;
 
 export default function Home() {
 	return (

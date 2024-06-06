@@ -1,11 +1,13 @@
-import Balance from "react-wrap-balancer";
 import { Bot, Database, Swords } from "lucide-react";
+import Balance from "react-wrap-balancer";
 import { FeatureLinkCard } from "@/components/feature-link-card";
+
+// TODO: padding at bottom
 
 export default function Home() {
 	return (
 		<div className="container flex-grow">
-			<section className="mx-auto flex max-w-[980px] flex-col items-center gap-2 pt-20 pb-16">
+			<section className="mx-auto flex max-w-[980px] flex-col items-center gap-2 pb-16 pt-20">
 				<h1 className="text-center text-5xl font-bold leading-[1.1] tracking-tighter">
 					Data-Driven Insights for the Albion Online Community
 				</h1>
@@ -17,7 +19,7 @@ export default function Home() {
 				</Balance>
 			</section>
 
-			<section className="flex flex-wrap gap-6 justify-center">
+			<section className="flex flex-wrap justify-center gap-6">
 				<FeatureLinkCard
 					href="/guild-attendance"
 					header="Guild Battles Attendance Report"

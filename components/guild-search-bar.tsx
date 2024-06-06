@@ -1,11 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Check, ChevronsUpDown, LoaderCircle } from "lucide-react";
 import { SearchGuild } from "albion-sdk";
+import { Check, ChevronsUpDown, LoaderCircle } from "lucide-react";
 import { debounce } from "remeda";
-import type { AlbionRegion } from "@/config/site-config";
-import { cn } from "@/lib/utils";
 import { searchGuilds } from "@/actions/search-guilds";
 import { Button } from "@/components/ui/button";
 import {
@@ -21,6 +19,8 @@ import {
 	PopoverContent,
 	PopoverTrigger,
 } from "@/components/ui/popover";
+import type { AlbionRegion } from "@/config/site-config";
+import { cn } from "@/lib/utils";
 
 export function SearchBar({ region }: { region: AlbionRegion }) {
 	const [open, setOpen] = useState(false);
@@ -69,7 +69,7 @@ export function SearchBar({ region }: { region: AlbionRegion }) {
 					/>
 					<CommandEmpty>
 						{loading ? (
-							<div className="flex justify-center items-center gap-2">
+							<div className="flex items-center justify-center gap-2">
 								<LoaderCircle className="animate-spin" />
 								Searching guilds...
 							</div>

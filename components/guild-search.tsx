@@ -2,17 +2,14 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { type AlbionRegion, siteConfig } from "@/config/site-config";
-import { GUILD_SEARCH_REGION_KEY } from "@/config/local-storage";
-import { Button } from "@/components/ui/button";
-import { RegionSelector } from "@/components/region-selector";
 import { SearchBar } from "@/components/guild-search-bar";
+import { RegionSelector } from "@/components/region-selector";
+import { Button } from "@/components/ui/button";
+import { GUILD_SEARCH_REGION_KEY } from "@/config/local-storage";
+import { siteConfig, type AlbionRegion } from "@/config/site-config";
 
 // TODO: load previously searched guilds?
-// TODO: timeout search after X seconds
-// TODO: ability to retry search
 // TODO: cancel API call / debounce on region change or popover closed
-// TODO: someway to tell diff between guilds
 // TODO: handle async errors, error bounderies, 404 page
 // TODO: add site footer
 
@@ -57,7 +54,7 @@ export function GuildSearch() {
 
 	return (
 		<>
-			<div className="flex flex-col sm:flex-row gap-2">
+			<div className="flex flex-col gap-2 sm:flex-row">
 				<SearchBar region={region} />
 
 				<div className="flex justify-center">

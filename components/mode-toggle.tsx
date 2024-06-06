@@ -1,7 +1,7 @@
 "use client";
 
-import { useTheme } from "next-themes";
 import { Check, Monitor, Moon, Sun } from "lucide-react";
+import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import {
 	DropdownMenu,
@@ -26,21 +26,21 @@ export function ModeToggle() {
 					<Sun className="h-[1.2rem] w-[1.2rem]" />
 					<span className="ml-1.5 font-semibold">Light</span>
 					{theme === "light" ? (
-						<Check className="h-[1.2rem] w-[1.2rem] ml-1.5" />
+						<Check className="ml-1.5 h-[1.2rem] w-[1.2rem]" />
 					) : null}
 				</DropdownMenuItem>
 				<DropdownMenuItem onClick={() => setTheme("dark")}>
 					<Moon className="h-[1.2rem] w-[1.2rem]" />
 					<span className="ml-1.5 font-semibold">Dark</span>
 					{theme === "dark" ? (
-						<Check className="h-[1.2rem] w-[1.2rem] ml-1.5" />
+						<Check className="ml-1.5 h-[1.2rem] w-[1.2rem]" />
 					) : null}
 				</DropdownMenuItem>
 				<DropdownMenuItem onClick={() => setTheme("system")}>
 					<Monitor className="h-[1.2rem] w-[1.2rem]" />
 					<span className="ml-1.5 font-semibold">System</span>
 					{theme === "system" ? (
-						<Check className="h-[1.2rem] w-[1.2rem] ml-1.5" />
+						<Check className="ml-1.5 h-[1.2rem] w-[1.2rem]" />
 					) : null}
 				</DropdownMenuItem>
 			</DropdownMenuContent>
