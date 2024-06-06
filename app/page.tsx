@@ -3,6 +3,8 @@ import Balance from "react-wrap-balancer";
 import { FeatureLinkCard } from "@/components/feature-link-card";
 
 // TODO: padding at bottom
+// TODO: add site footer
+// TODO: handle async errors, error bounderies, 404 page
 
 export default function Home() {
 	return (
