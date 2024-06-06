@@ -1,6 +1,8 @@
 import { GuildSearch } from "@/components/guild-search";
 import Balance from "react-wrap-balancer";
 
+export const maxDuration = 30;
+
 export default function Home() {
 	return (
 		<div className="container flex-grow">
