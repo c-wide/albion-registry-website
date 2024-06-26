@@ -8,8 +8,9 @@ import { cn } from "@/lib/utils";
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
-	title: "albion.tools",
-	description: "Tools created for the Albion Online community",
+	title: "Albion Registry",
+	description:
+		"Detailed historical records of Albion Online's players, guilds, and alliances",
 };
 
 export default function RootLayout({

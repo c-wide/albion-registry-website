@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { SearchBar } from "@/components/guild-search-bar";
 import { RegionSelector } from "@/components/region-selector";
 import { Button } from "@/components/ui/button";
-import { GUILD_SEARCH_REGION_KEY } from "@/config/local-storage";
+import { SELECTED_REGION_KEY } from "@/lib/local-storage";
 import { siteConfig, type AlbionRegion } from "@/config/site-config";
 import { isValidRegion, loadRegion } from "@/lib/region";
 
@@ -23,7 +23,7 @@ export function GuildSearch() {
 	const handleRegionChange = (selectedRegion: string) => {
 		if (!isValidRegion(selectedRegion)) return;
 		setRegion(selectedRegion);
-		localStorage.setItem(GUILD_SEARCH_REGION_KEY, selectedRegion);
+		localStorage.setItem(SELECTED_REGION_KEY, selectedRegion);
 	};
 
 	if (region === null) {
