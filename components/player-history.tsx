@@ -46,7 +46,7 @@ export function PlayerHistory({ entityType, region, id }: HistoryParams) {
 			renderItem={(guild) => (
 				<div
 					key={`${guild.guild_id}_${guild.first_seen}`}
-					className="pb-3 last:pb-0"
+					className="ml-2 pb-3 last:pb-0"
 				>
 					<Link
 						href={`/guild/${region}/${guild.guild_id}`}

@@ -33,7 +33,7 @@ export function AllianceHistory({ entityType, region, id }: HistoryParams) {
 			renderItem={(guild) => (
 				<div
 					key={`${guild.guild_id}_${guild.first_seen}`}
-					className="pb-2 last:pb-0"
+					className="ml-2 pb-2 last:pb-0"
 				>
 					<Link
 						href={`/guild/${region}/${guild.guild_id}`}
