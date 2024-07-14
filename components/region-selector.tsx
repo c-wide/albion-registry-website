@@ -6,15 +6,17 @@ import {
 	SelectValue,
 } from "@/components/ui/select";
 
-export function RegionSelector({
+export type RegionSelectorProps<T extends readonly string[]> = {
+	currentRegion: T[number];
+	regionList: T;
+	handleRegionChange: (region: T[number]) => void;
+};
+
+export function RegionSelector<T extends readonly string[]>({
 	currentRegion,
 	regionList,
 	handleRegionChange,
-}: {
-	currentRegion: string;
-	regionList: Array<string>;
-	handleRegionChange: (region: string) => void;
-}) {
+}: RegionSelectorProps<T>) {
 	return (
 		<Select value={currentRegion} onValueChange={handleRegionChange}>
 			<SelectTrigger className="w-[110px]">

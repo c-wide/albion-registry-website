@@ -1,5 +1,5 @@
-import { SELECTED_REGION_KEY } from "@/lib/local-storage";
 import { AlbionRegion, siteConfig } from "@/config/site-config";
+import { SELECTED_REGION_KEY } from "@/lib/local-storage";
 
 export function isValidRegion(region: string): region is AlbionRegion {
 	return siteConfig.albionServerRegions.includes(region as AlbionRegion);
