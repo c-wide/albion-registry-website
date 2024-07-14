@@ -57,7 +57,7 @@ export function History<T>({
 			{data[0].length === 0 ? (
 				emptyState
 			) : (
-				<ScrollArea className="max-h-[429px] overflow-y-auto">
+				<ScrollArea>
 					{data.flat().map((item, index) => renderItem(item, index))}
 					{isLoadingMore && (
 						<div className="mt-2 flex justify-center">
